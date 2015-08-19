@@ -14,7 +14,6 @@ public class DoublyLinkedList<T> {
 
 	private Node<T> head = null;
 	private Node<T> tail = null;
-	private int size = 0;
 
 	public DoublyLinkedList(T[] array) {
 		if (array != null) {
@@ -35,7 +34,6 @@ public class DoublyLinkedList<T> {
 			newNode.prev = tail;
 			tail = newNode;
 		}
-		size += 1;
 	}
 
 	public void reverse() {
