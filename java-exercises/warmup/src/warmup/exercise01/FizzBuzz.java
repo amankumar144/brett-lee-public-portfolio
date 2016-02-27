@@ -1,7 +1,7 @@
 package warmup.exercise01;
 
 /**
- * From: http://elementsofprogramminginterviews.com/Warming-Up/
+ * From: http://elementsofprogramminginterviews.com/2015-04-01-warming-up/
  * 
  * Primitive types: write a program that takes as input an integer, N, and
  * prints all the integers from 1 to N, replacing numbers divisible by 3 with
@@ -33,7 +33,7 @@ public class FizzBuzz {
 		}
 	}
 
-	protected static String fizzBuzz(int i) {
+	protected static String fizzBuzz(final int i) {
 		// zero is a special case, because it can technically be divisible by
 		// all of them
 		if (i == 0) {

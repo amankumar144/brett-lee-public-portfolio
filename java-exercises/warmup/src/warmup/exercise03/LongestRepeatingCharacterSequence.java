@@ -1,7 +1,7 @@
 package warmup.exercise03;
 
 /**
- * From: http://elementsofprogramminginterviews.com/Warming-Up/
+ * From: http://elementsofprogramminginterviews.com/2015-04-01-warming-up/
  * 
  * Strings: Write a program to find the longest substring that consists of a
  * single character in an input string.
@@ -11,7 +11,7 @@ package warmup.exercise03;
  */
 public class LongestRepeatingCharacterSequence {
 
-	public static String findLongestRepeatingCharSequence(String str) {
+	public static String findLongestRepeatingCharSequence(final String str) {
 		String longestRepeatingCharSeq = "";
 		if (str != null && str.length() > 0) {
 			// Initialize with the first character so we have something to compare.

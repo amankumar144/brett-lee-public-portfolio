@@ -1,7 +1,7 @@
 package warmup.exercise04;
 
 /**
- * From: http://elementsofprogramminginterviews.com/Warming-Up/
+ * From: http://elementsofprogramminginterviews.com/2015-04-01-warming-up/
  * 
  * Linked Lists: Implement a doubly linked list of integers class. Write a
  * reverse method for your list class that reverses a list without changing the
@@ -15,7 +15,7 @@ public class DoublyLinkedList<T> {
 	private Node<T> head = null;
 	private Node<T> tail = null;
 
-	public DoublyLinkedList(T[] array) {
+	public DoublyLinkedList(final T[] array) {
 		if (array != null) {
 			for (T val : array) {
 				this.add(val);
@@ -23,7 +23,7 @@ public class DoublyLinkedList<T> {
 		}
 	}
 
-	public void add(T val) {
+	public void add(final T val) {
 		Node<T> newNode = new Node<T>();
 		newNode.data = val;
 		if (head == null && tail == null) {

@@ -1,7 +1,7 @@
 package warmup.exercise02;
 
 /**
- * From: http://elementsofprogramminginterviews.com/Warming-Up/
+ * From: http://elementsofprogramminginterviews.com/2015-04-01-warming-up/
  * 
  * Arrays: Write a program that tests if a 2D square array is symmetric about
  * the diagonal from (0,0) to (n-1,n-1).
@@ -37,7 +37,7 @@ public class DiagonallySymmetrical {
 		return true;
 	}
 
-	private static boolean isEqualReversed(int[] arr1, int[] arr2) {
+	private static boolean isEqualReversed(final int[] arr1, final int[] arr2) {
 		int lastIndex = arr2.length - 1;
 		for (int i = 0; i < arr1.length; i++) {
 			if (arr1[i] != arr2[lastIndex - i]) {
