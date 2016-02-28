@@ -3,7 +3,7 @@ package epi.chapter06;
 /**
  * From Elements of Programming, Chapter 6, Exercise 1
  * 
- * Dutch National Flag problem: sort the colors of the flag to be
+ * Dutch National Flag problem: sort the colors of the flag to be red(0), white(1) and blue(2)
  * 
  * @author leebrett https://github.com/leebrett/brett-lee-public-portfolio
  */
