@@ -36,14 +36,11 @@ public class VampireNumber {
 		if (number != fang1 * fang2)
 			return false;
 
-		String firstFang = String.valueOf(fang1);
-		String secondFang = String.valueOf(fang2);
-
-		if (firstFang.endsWith("0") && secondFang.endsWith("0"))
+		if (fang1 % 10 == 0 && fang2 % 10 == 0)
 			return false;
 
 		char[] orig = String.valueOf(number).toCharArray();
-		char[] fangs = (firstFang + secondFang).toCharArray();
+		char[] fangs = (String.valueOf(fang1) + String.valueOf(fang2)).toCharArray();
 		Arrays.sort(orig);
 		Arrays.sort(fangs);
 		if (orig.length != fangs.length)
