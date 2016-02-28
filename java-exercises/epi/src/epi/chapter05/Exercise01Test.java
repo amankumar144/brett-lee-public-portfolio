@@ -1,9 +1,15 @@
 package epi.chapter05;
 
+import java.util.Arrays;
 import java.util.Random;
 
 import org.junit.Test;
 
+/**
+ * 
+ * @author leebrett
+ * https://github.com/leebrett/brett-lee-public-portfolio
+ */
 public class Exercise01Test {
 
 	private static final long[] RANDOM_TEST_VALUES;
@@ -19,7 +25,8 @@ public class Exercise01Test {
 	@Test // Testing against the standard Java library for determining bit
 			// parity
 	public void test() {
-		for (long num : RANDOM_TEST_VALUES) {
+		long[] test = Arrays.copyOf(RANDOM_TEST_VALUES, RANDOM_TEST_VALUES.length);
+		for (long num : test) {
 			assert (Exercise01.getParity(num) == Long.bitCount(num) % 2);
 		}
 	}

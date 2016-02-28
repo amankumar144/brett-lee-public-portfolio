@@ -1,12 +1,15 @@
 package epi.chapter05;
 
 /**
+ * From Elements of Programming, Chapter 5, Exercise 1 
+ * 
  * Find the parity of 64-bit words. - Parity 1 = number of 1-bits are odd. -
  * Parity 0 = number of 1-bits are even.
  * 
- * @author brettlee
- *
+ * @author leebrett
+ * https://github.com/leebrett/brett-lee-public-portfolio
  */
+
 public class Exercise01 {
 	private static short[] parityLookup;
 	private static final int BIT_MASK = 0xFFFF;
