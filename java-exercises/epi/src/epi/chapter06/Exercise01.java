@@ -17,17 +17,14 @@ public class Exercise01 {
 		while (equal <= larger) {
 			switch (flagArray[equal]) {
 				case 0: {
-					swap(flagArray, smaller, equal);
-					smaller++;
-					equal++;
+					swap(flagArray, smaller++, equal++);
 					break;
 				}
 				case 1:
 					equal++;
 					break;
 				case 2: {
-					swap(flagArray, equal, larger);
-					larger--;
+					swap(flagArray, equal, larger--);
 					break;
 				}
 			}
