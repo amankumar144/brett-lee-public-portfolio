@@ -1,5 +1,8 @@
 package epi.chapter06;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * 
  * From Elements of Programming, Chapter 6, Exercise 7
@@ -13,24 +16,28 @@ package epi.chapter06;
 public class Exercise07 {
 
 	public static int getMaxProfit(int[] stockPrices) {
+		List<Integer> profits = new ArrayList<>();
 		if (stockPrices.length >= 2) {
-			int currMin = stockPrices[0];
-			int minIndex = 0;
-			for (int i = 1; i < stockPrices.length; i++) {
-				if (stockPrices[i] < currMin) {
-					currMin = stockPrices[i];
-					minIndex = i;
+			for (int i = 0; i < stockPrices.length; i++) {
+				int currMax = stockPrices[i];
+				for (int j = i + 1; j < stockPrices.length; j++) {
+					if (stockPrices[j] > currMax)
+						currMax = stockPrices[j];
 				}
+				if (stockPrices[i] < currMax)
+					profits.add(currMax - stockPrices[i]);
 			}
-			int currMax = stockPrices[minIndex];
-			for (int i = minIndex + 1; i < stockPrices.length; i++) {
-				if (stockPrices[i] > currMax)
-					currMax = stockPrices[i];
-			}
-			if (currMin < currMax)
-				return currMax - currMin;
 		}
-		return 0;
+		return getMax(profits);
+	}
+
+	private static int getMax(List<Integer> list) {
+		int max = 0;
+		for (Integer val : list) {
+			if (val > max)
+				max = val;
+		}
+		return max;
 	}
 
 }

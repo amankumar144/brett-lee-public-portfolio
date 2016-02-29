@@ -15,7 +15,7 @@ public class Exercise07Test {
 
 	@Test
 	public void test2() {
-		assertEquals(Exercise07.getMaxProfit(TEST_2), 30);
+		assertEquals(Exercise07.getMaxProfit(TEST_2), 0);
 	}
 
 }
