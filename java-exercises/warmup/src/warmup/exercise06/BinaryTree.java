@@ -56,8 +56,8 @@ public class BinaryTree<T extends Comparable<T>> {
 
 	private void readPostOrder(BinaryTree<T>.Node<T> node, List<T> ret) {
 		if (node != null) {
-			readPreOrder(node.left, ret);
-			readPreOrder(node.right, ret);
+			readPostOrder(node.left, ret);
+			readPostOrder(node.right, ret);
 			ret.add(node.data);
 		}
 	}

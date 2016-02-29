@@ -3,39 +3,37 @@ package epi.chapter06;
 /**
  * From Elements of Programming, Chapter 6, Exercise 1
  * 
- * Dutch National Flag problem: sort the colors of the flag to be red(0), white(1) and blue(2)
+ * Dutch National Flag problem: sort the colors of the flag to be red(0),
+ * white(1) and blue(2)
  * 
  * @author leebrett https://github.com/leebrett/brett-lee-public-portfolio
  */
 public class Exercise01 {
 
 	public static void dutchFlagSort(int[] flagArray) {
-		int pivot = flagArray.length / 2;
-		for (int i = 0, smaller = 0, j = flagArray.length - 1, larger = flagArray.length
-				- 1; i < flagArray.length; i++, --j) {
-			if (flagArray[i] < pivot) {
-				swap(flagArray, i, smaller++);
-			}
-			if (flagArray[j] > pivot) {
-				swap(flagArray, j, larger--);
-			}
-		}
-	}
-
-	public static void dutchFlagSortOptimized(int[] flagArray) {
-		int pivot = flagArray.length / 2;
-		int equal = 0, smaller = 0, larger = flagArray.length - 1;
+		int smaller = 0;
+		int larger = flagArray.length - 1;
+		int equal = 0;
 		while (equal <= larger) {
-			if (flagArray[equal] < pivot) {
-				swap(flagArray, smaller++, equal++);
-			} else if (flagArray[equal] == pivot) {
-				++equal;
-			} else {
-				swap(flagArray, equal, larger--);
+			switch (flagArray[equal]) {
+				case 0: {
+					swap(flagArray, smaller, equal);
+					smaller++;
+					equal++;
+					break;
+				}
+				case 1:
+					equal++;
+					break;
+				case 2: {
+					swap(flagArray, equal, larger);
+					larger--;
+					break;
+				}
 			}
 		}
 	}
-
+	
 	private static void swap(int[] arr, int idx1, int idx2) {
 		int swapValue = arr[idx1];
 		arr[idx1] = arr[idx2];
