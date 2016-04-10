@@ -1,4 +1,4 @@
-package com.mycompany.springapp.model;
+package springapp.model;
 
 import java.io.Serializable;
 

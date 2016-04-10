@@ -1,4 +1,4 @@
-package com.mycompany.springapp.controller;
+package springapp.controller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,9 +6,10 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-import com.mycompany.springapp.model.Person;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
+
+import springapp.model.Person;
 
 @Component
 @Scope("prototype")

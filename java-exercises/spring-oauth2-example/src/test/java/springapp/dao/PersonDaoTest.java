@@ -1,9 +1,11 @@
-package com.mycompany.springapp.dao;
+package springapp.dao;
 
 import java.util.List;
 
-import com.mycompany.springapp.controller.DataInitializer;
-import com.mycompany.springapp.model.Person;
+import springapp.controller.DataInitializer;
+import springapp.dao.PersonDao;
+import springapp.model.Person;
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

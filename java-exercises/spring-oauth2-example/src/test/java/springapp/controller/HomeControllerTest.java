@@ -1,6 +1,7 @@
-package com.mycompany.springapp.controller;
+package springapp.controller;
 
 import junit.framework.Assert;
+import springapp.controller.HomeController;
 
 import org.junit.Test;
 import org.springframework.ui.ExtendedModelMap;

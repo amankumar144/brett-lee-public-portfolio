@@ -1,9 +1,10 @@
-package com.mycompany.springapp.controller;
+package springapp.controller;
 
 import java.util.List;
 
-import com.mycompany.springapp.dao.PersonDao;
-import com.mycompany.springapp.model.Person;
+import springapp.dao.PersonDao;
+import springapp.model.Person;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

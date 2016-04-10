@@ -1,13 +1,14 @@
-package com.mycompany.springapp.dao;
+package springapp.dao;
 
 import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-import com.mycompany.springapp.model.Person;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
+
+import springapp.model.Person;
 
 @Repository
 public class PersonDao {

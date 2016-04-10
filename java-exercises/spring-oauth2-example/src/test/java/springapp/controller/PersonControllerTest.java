@@ -1,4 +1,4 @@
-package com.mycompany.springapp.controller;
+package springapp.controller;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -7,7 +7,9 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.List;
 
-import com.mycompany.springapp.model.Person;
+import springapp.controller.PersonController;
+import springapp.model.Person;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
